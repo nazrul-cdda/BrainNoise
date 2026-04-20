@@ -1,0 +1,85 @@
+/* ─── Reset & Base ─── */
+html, body, #root {
+  min-height: 100%;
+  overflow: visible; /* critical for sticky nav */
+}
+
+body {
+  background-color: bisque;
+  margin: 0;
+  margin-right: 200px;
+  background-image: url("./assets/img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: beige;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.nav button {
+  cursor: pointer;
+  background: none;
+  border: 1px solid #333;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* works here */
+.container {
+  display: grid;
+  /* grid-template-columns: auto auto auto; */
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows:  2fr 3fr;
+  /* grid-row-gap: 2px;
+  grid-column-gap: 2px; */
+  grid-gap: 4px;
+}
+
+.container > div {
+  background-image: url("./assets/kagoj.jpg");
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.container > div > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#one {
+  font-size: 20px;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+#two {
+  font-size: 30px;
+  font-family: 'Indie Flower', cursive;
+}
+
+#three {
+  font-size: 20px;
+  text-align: right;
+}
