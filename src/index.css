@@ -83,3 +83,8 @@ body {
   font-size: 20px;
   text-align: right;
 }
+.registration {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1100px;
+}
