@@ -30,7 +30,7 @@ export const Login = () => {
     }
     console.log(`User = ${user}`);
     return(
-        <div className="Login">
+        <div className="login">
             <h1>Please, Login</h1>
             <input
                 type = "username"

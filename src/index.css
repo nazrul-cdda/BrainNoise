@@ -89,3 +89,15 @@ body {
   padding-left: 100px;
   max-width: 600px;
 }
+.registration h1 {
+  text-align: center;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+  max-width: 600px;
+}
+.login h1 {
+  text-align: center;
+}
