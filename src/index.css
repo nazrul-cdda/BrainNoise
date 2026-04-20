@@ -86,5 +86,6 @@ body {
 .registration {
   display: flex;
   flex-direction: column;
-  margin-right: 1100px;
+  padding-left: 100px;
+  max-width: 600px;
 }
