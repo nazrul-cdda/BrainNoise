@@ -32,6 +32,7 @@ export const App = () => {
   return (
     <PostContext.Provider value = {{post, setPost, user, setUser, currentUser, setCurrentUser}}>
         <div>
+          <title>BrainNoise</title>
           <Navbar />
           <Outlet />
         </div>
