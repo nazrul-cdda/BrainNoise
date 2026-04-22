@@ -13,10 +13,10 @@ export const AllPosts = () => {
     }
     return (
         <div>
-            <h1>All Previous Posts</h1>
+            <h1 style={{ marginLeft: "50px" }}>All Previous Posts</h1>
             <div className="container">
-                {[...post].reverse().map((i, index) => (
-                 <div key = {index}><PostCard text = {i.text} id = {i.author} time = {i.time} /></div>
+                {[...post].reverse().map((i) => (
+                 <div key = {i.id}><PostCard id = {i.id} text = {i.text} author = {i.author} time = {i.time} isLoggedIn = {i.author === currentUser.userName}/></div>
                 ))}
             </div>
         </div>

@@ -25,6 +25,7 @@ export const Home = () => {
         setPost((prev) => [
             ...prev, 
             {
+                id: crypto.randomUUID(),
                 text: text,
                 author: currentUser.userName,
                 time: formatPostTime(new Date()),
@@ -72,8 +73,8 @@ export const Home = () => {
             />
             <h2>Previous Posts:</h2>
             <div className="container">
-                 {[...filtered].reverse().map((i, index) => (
-                    <div key = {index}><PostCard text = {i.text} id = {i.author} time = {i.time} /></div>
+                 {[...filtered].reverse().map((i) => (
+                    <div key = {i.id}><PostCard id = {i.id} text = {i.text} author = {i.author} time = {i.time} isLoggedIn = {true}/></div>
                 ))}
             </div>
         </div>

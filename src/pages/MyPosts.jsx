@@ -7,10 +7,10 @@ export const MyPosts = () => {
     const filtered = post.filter(item => item.author === currentUser.userName);
     return (
         <div>
-            <h1>All Your Posts</h1>
+            <h1 style={{ marginLeft: "50px" }}>All Your Posts</h1>
             <div className="container">
-                {[...filtered].reverse().map((i, index) => (
-                    <div key = {index}><PostCard text = {i.text} id = {i.author} time = {i.time} /></div>
+                {[...filtered].reverse().map((i) => (
+                    <div key = {i.id}><PostCard id = {i.id} text = {i.text} author = {i.author} time = {i.time} isLoggedIn = {true}/></div>
                 ))}
             </div>
         </div>
