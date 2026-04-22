@@ -25,7 +25,7 @@ export const Home = () => {
         setPost((prev) => [
             ...prev, 
             {
-                id: crypto.randomUUID(),
+                id: Math.random(),
                 text: text,
                 author: currentUser.userName,
                 time: formatPostTime(new Date()),

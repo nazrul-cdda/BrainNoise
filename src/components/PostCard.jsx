@@ -15,6 +15,7 @@ export const PostCard = ({id, text, author, time, isLoggedIn}) => {
             u.id === id ? {...u, text: editedText} : u
         ))
         setIsEditing(false);
+        setEditedText(text);
     }
 
     const handleDelete = () => {
@@ -25,7 +26,7 @@ export const PostCard = ({id, text, author, time, isLoggedIn}) => {
         <div>
             <div>
                 <p id="one">@{author}</p>
-                <p id="two">{editedText}</p>
+                <p id="two">{text}</p>
                 <p id="three">{time}</p>
 
                 {isLoggedIn && (
@@ -52,7 +53,7 @@ export const PostCard = ({id, text, author, time, isLoggedIn}) => {
                         />
                         <div className="modal-buttons">
                             <button onClick={handleEdit}>Save</button>
-                            <button onClick={() => setIsEditing(false)}>Cancel</button>
+                            <button onClick={() => {setIsEditing(false), setEditedText(text)}}>Cancel</button>
                         </div>
                     </div>
                 </div>
