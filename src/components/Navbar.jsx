@@ -15,6 +15,7 @@ export const Navbar = () => {
             <Link to = "/">Home</Link>
             {(currentUser.userName) && <Link to = "/myposts">My Posts</Link>}
             <Link to = "/allposts">All Posts</Link>
+            <Link to = "/voiceroom">VoiceRoom</Link>
             <Link to = "/about">About</Link>
             {!currentUser.userName && (
                 <span>

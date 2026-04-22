@@ -7,6 +7,7 @@ import { Login } from "../pages/Login";
 import { MyPosts } from "../pages/MyPosts";
 import { AllPosts } from "../pages/AllPosts";
 import { Register } from "../pages/Register";
+import { VoiceRoom } from "../pages/VoiceRoom";
 
 export const router = createBrowserRouter([
     {
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
             {
                 path: "registration",
                 element: <Register />
+            },
+            {
+                path: "voiceroom",
+                element: <VoiceRoom />
             }
         ]
     }
